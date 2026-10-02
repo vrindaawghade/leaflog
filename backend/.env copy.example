@@ -1,0 +1,3 @@
+# Copy this file, rename the copy to ".env" and paste your own Atlas string
+MONGO_URI=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/leaflog?retryWrites=true&w=majority
+PORT=5000

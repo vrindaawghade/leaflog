@@ -1,0 +1,25 @@
+EXPERIMENT 8 - Postman tests (base URL: http://localhost:5000)
+For POST/PUT: Body > raw > JSON.  Take a screenshot of each request AND its response.
+
+1. GET     /                                   -> 200 {"message":"LeafLog API is running"}
+2. POST    /api/plants                         -> 201 (copy the returned _id for the next steps)
+   {
+     "name": "Tulsi",
+     "species": "Ocimum tenuiflorum",
+     "wateringEveryDays": 2,
+     "notes": "Keep in sunlight"
+   }
+3. POST    /api/plants  (a second plant)       -> 201
+   { "name": "Aloe Vera", "wateringEveryDays": 7 }
+4. GET     /api/plants                         -> 200 array of plants
+5. GET     /api/plants/<id>                    -> 200 one plant
+6. PUT     /api/plants/<id>                    -> 200 updated plant
+   { "name": "Tulsi", "wateringEveryDays": 3, "notes": "Updated note" }
+7. PATCH   /api/plants/<id>/water              -> 200 lastWatered changes to now
+8. GET     /api/plants?name=alo                -> 200 search result
+9. DELETE  /api/plants/<id>                    -> 200 {"message":"Plant deleted"}
+
+Error cases (good to show sir):
+10. POST   /api/plants   body: {}              -> 400 "Plant name is required"
+11. GET    /api/plants/123                     -> 400 "Invalid plant id"
+12. GET    /api/plants/64b7f0c2e1a2b3c4d5e6f7a8 (valid format, doesn't exist) -> 404

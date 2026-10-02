@@ -1,0 +1,17 @@
+REPL (Read-Eval-Print Loop) - type these in the VS Code terminal
+
+1. Type:  node        (the prompt changes to >)
+2. Try each line below, one at a time:
+
+   2 + 3
+   const name = "LeafLog"
+   name.toUpperCase()
+   [1, 2, 3].map(n => n * 2)
+   function add(a, b) { return a + b }
+   add(5, 7)
+   Math.max(4, 9, 2)
+   _                     (underscore = last result)
+   .help                 (list REPL commands)
+   .exit                 (or press Ctrl+C twice)
+
+Take ONE screenshot showing these commands and their outputs.

@@ -1,0 +1,11 @@
+body { background: #f1f8f2; }
+.bg-leaf { background: linear-gradient(90deg, #2e7d32, #1b5e20); }
+.btn-leaf { background: #2e7d32; border-color: #2e7d32; color: #fff; }
+.btn-leaf:hover { background: #1b5e20; border-color: #1b5e20; color: #fff; }
+.output-box {
+  min-height: 260px;
+  font-family: Consolas, monospace;
+  font-size: 1rem;
+  white-space: pre-wrap;
+  color: #1b5e20;
+}

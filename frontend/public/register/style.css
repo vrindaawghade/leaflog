@@ -1,0 +1,40 @@
+body {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+}
+
+.auth-card {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.brand-panel {
+  background: linear-gradient(160deg, #2e7d32 0%, #1b5e20 100%);
+}
+
+.brand-list li {
+  font-size: 1.05rem;
+}
+
+.btn-leaf {
+  background-color: #2e7d32;
+  border-color: #2e7d32;
+  color: #fff;
+}
+
+.btn-leaf:hover,
+.btn-leaf:focus {
+  background-color: #1b5e20;
+  border-color: #1b5e20;
+  color: #fff;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.2);
+}
+
+.form-check-input:checked {
+  background-color: #2e7d32;
+  border-color: #2e7d32;
+}

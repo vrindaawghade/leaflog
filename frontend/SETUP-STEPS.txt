@@ -1,0 +1,18 @@
+FRONTEND SETUP (Experiments 3, 4, 9)
+
+Run these in the VS Code terminal, from the LeafLog folder:
+
+  npm create vite@latest frontend -- --template react
+  (if it asks anything: Framework = React, Variant = JavaScript. If it says the folder is not empty, choose "Ignore files and continue")
+  cd frontend
+  npm install
+  npm install react-router-dom axios
+
+Then:
+  1. Delete  src/App.css  and the  src/assets  folder
+  2. Copy ALL files from the downloaded "src" folder into frontend/src
+     (overwrite main.jsx, App.jsx, index.css; also add api.js, utils.js, components/, pages/)
+  3. Run:  npm run dev
+  4. Open the link shown (usually http://localhost:5173)
+
+For Experiment 9 the backend must also be running (another terminal: cd backend, npm run dev).

@@ -1,0 +1,35 @@
+EXPERIMENT 5 - MongoDB: database, collection, documents, CRUD
+Use MongoDB Compass (free, mongodb.com/try/download/compass) connected to your Atlas cluster.
+Open the ">_ MONGOSH" tab at the bottom of Compass and run these one by one.
+(Screenshot each result. Atlas > Browse Collections also shows the data.)
+
+--- 1. Create database + collection ---
+use leaflog
+db.createCollection("plants")
+show collections
+
+--- 2. CREATE (insert) ---
+db.plants.insertOne({ name: "Tulsi", species: "Ocimum tenuiflorum", wateringEveryDays: 2, lastWatered: new Date() })
+db.plants.insertMany([
+  { name: "Aloe Vera", species: "Aloe barbadensis", wateringEveryDays: 7, lastWatered: new Date() },
+  { name: "Money Plant", species: "Epipremnum aureum", wateringEveryDays: 4, lastWatered: new Date() },
+  { name: "Snake Plant", species: "Dracaena trifasciata", wateringEveryDays: 10, lastWatered: new Date() }
+])
+
+--- 3. READ ---
+db.plants.find()
+db.plants.find({ name: "Tulsi" })
+db.plants.find({ wateringEveryDays: { $gt: 3 } })
+db.plants.find({}, { name: 1, wateringEveryDays: 1, _id: 0 })
+db.plants.find().sort({ wateringEveryDays: 1 })
+db.plants.countDocuments()
+
+--- 4. UPDATE ---
+db.plants.updateOne({ name: "Tulsi" }, { $set: { wateringEveryDays: 3 } })
+db.plants.updateMany({ wateringEveryDays: { $gte: 7 } }, { $set: { notes: "Water sparingly" } })
+db.plants.find()
+
+--- 5. DELETE ---
+db.plants.deleteOne({ name: "Snake Plant" })
+db.plants.find()
+(Do NOT run deleteMany / drop before your screenshots are done.)
