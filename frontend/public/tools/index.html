@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Garden Tools - LeafLog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/" class="brand">🌿 LeafLog</a>
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/plants">My Plants</a>
+      <a href="/guide">Care Guide</a>
+      <a href="/tools/index.html" class="active">Garden Tools</a>
+      <a href="/register/index.html" class="signup">Sign up</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Garden Tools</h1>
+    <p class="muted">Handy calculators and reminders to help you plan your garden.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>📅 Garden calendar</h3>
+        <p class="muted small">Today's date with a gardening tip for this month.</p>
+        <button id="dateBtn">Show today</button>
+        <div class="result" id="dateOut"></div>
+      </div>
+
+      <div class="card">
+        <h3>🪴 Pot arrangements</h3>
+        <p class="muted small">How many ways can you line up your pots in a row?</p>
+        <button id="factBtn">Calculate</button>
+        <div class="result" id="factOut"></div>
+      </div>
+
+      <div class="card">
+        <h3>💧 Watering planner</h3>
+        <p class="muted small">Water needed for 1 to 10 plants at your chosen amount per plant.</p>
+        <button id="tableBtn">Make table</button>
+        <div class="result" id="tableOut"></div>
+      </div>
+
+      <div class="card">
+        <h3>🌱 Seed bed planner</h3>
+        <p class="muted small">A triangular bed has 1 seed in row 1, 2 in row 2, and so on. How many seeds in total?</p>
+        <button id="sumBtn">Count seeds</button>
+        <div class="result" id="sumOut"></div>
+      </div>
+
+      <div class="card">
+        <h3>📊 Garden summary</h3>
+        <p class="muted small">Weekly water use and thirsty plants in a sample garden.</p>
+        <button id="arrBtn">Summarise</button>
+        <div class="result" id="arrOut"></div>
+      </div>
+
+      <div class="card">
+        <h3>⏰ Watering reminders</h3>
+        <p class="muted small">Note down the plants you need to water today.</p>
+        <button id="remBtn">Add reminder</button>
+        <button id="clearBtn" class="danger">Clear all</button>
+        <p class="ok" id="notice"></p>
+        <ul class="list" id="remList"></ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">🌿 LeafLog · Grow something good</footer>
+  <script src="script.js"></script>
+</body>
+</html>

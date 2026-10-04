@@ -8,6 +8,7 @@ function Navbar() {
         <NavLink to="/" end>Home</NavLink>
         <NavLink to="/plants">My Plants</NavLink>
         <NavLink to="/guide">Care Guide</NavLink>
+        <a href="/tools/index.html">Garden Tools</a>
         <a href="/register/index.html" className="signup">Sign up</a>
       </div>
     </nav>
